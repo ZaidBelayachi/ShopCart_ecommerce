@@ -17,7 +17,7 @@ const HomeBanner = () => {
             className='bg-shop-dark-green text-white/90 px-5 py-2 rounded-md text-sm font-semibold hover:text-white hover:bg-shop-dark-green hoverEffect'>Buy Now</Link>
         </div>
         <div>
-            <Image src={banner_1} alt='banner_1' className='hidden md:inline-flex w-96'/>
+            <Image src={banner_1} alt="banner_1" className='hidden md:inline-flex w-96'/>
         </div>
     </div>
   )
