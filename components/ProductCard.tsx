@@ -8,6 +8,7 @@ import { Title } from './ui/text'
 import PriceView from './PriceView'
 import AddToCartButton from './AddToCartButton'
 
+
 const ProductCard = ({product}:{product:Product}) => {
   return (
     <div className='text-sm border-[1px] border-dark_blue/20 rounded-md bg-white group'>
@@ -71,9 +72,8 @@ const ProductCard = ({product}:{product:Product}) => {
           discount={product?.discount}
           className="text-sm"
         />
-        <AddToCartButton 
-        product={product} 
-        classname="w-36 rounded-full"/>
+        <AddToCartButton product={product} className="w-32 rounded-full"/>
+        
         </div>
     </div>
   )

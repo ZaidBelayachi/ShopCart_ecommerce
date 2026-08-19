@@ -1,9 +1,9 @@
 "use client";
-import React from "react";
-import { Product } from "@/sanity.types";
-import { Button } from "./ui/button";
-import { ShoppingBag } from "lucide-react";
-
+import { Product } from '@/sanity.types';
+import React from 'react';
+import { Button } from './ui/button';
+import { ShoppingBag } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 interface Props {
   product: Product;
@@ -11,20 +11,23 @@ interface Props {
 }
 
 const AddToCartButton = ({ product, className }: Props) => {
-  
   const isOutOfStock = product?.stock === 0;
-
-  
-  return 
-    <div >
-   
-        <Button>
-            
-          <ShoppingBag /> {isOutOfStock ? "Out of Stock" : "Add to Cart"}
-        </Button>
-      
+  const handleAddToCart = () =>{
+    
+  }
+  return (
+    <div>
+      <Button 
+        onClick={handleAddToCart}
+        disabled={isOutOfStock}
+        className={cn(
+            "w-full bg-shop-dark-green/80 text-shop_light_bg shadow-none border border-shop-dark-green/80 font-semibold tracking-wide hover:text-white hover:bg-shop-dark-green hover:border-shop-dark-green hoverEffect",
+            className
+          )}>
+        <ShoppingBag /> {isOutOfStock ? "Out of Stock" : "Add to Cart"}
+      </Button>
     </div>
-  
-};
+  )
+}
 
-export default AddToCartButton;
+export default AddToCartButton
