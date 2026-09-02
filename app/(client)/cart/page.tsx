@@ -90,6 +90,7 @@ const CartPage = () => {
         address: selectedAddress,
       };
       const checkoutUrl = await createCheckoutSession(groupedItems, metadata);
+      
       if (checkoutUrl) {
         window.location.href = checkoutUrl;
       }
